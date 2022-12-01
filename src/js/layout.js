@@ -3,8 +3,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+import { Films } from "./views/films";
+import { People } from "./views/people";
+import { Planets } from "./views/planets";
+import { Species } from "./views/species";
+import { Starships } from "./views/starships";
+import { Vehicles } from "./views/vehicles";
+import { LoginSignup } from "./views/loginSignup";
+
+
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -23,9 +30,15 @@ const Layout = () => {
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
-						<Route path="*" element={<h1>Not found!</h1>} />
+						<Route path="/films" element={<Films />} />
+						<Route path="/people" element={<People />} />
+						<Route path="/planets" element={<Planets />} />
+						<Route path="/planets" element={<Planets />} />
+						<Route path="/species" element={<Species />} />
+						<Route path="/starships" element={<Starships />} />
+						<Route path="/vehicles" element={<Vehicles />} />
+						<Route path="/loginSignup" element={<LoginSignup />} />
+						<Route path="*" element={<h1>Not found Page!</h1>} />
 					</Routes>
 					<Footer />
 				</ScrollToTop>

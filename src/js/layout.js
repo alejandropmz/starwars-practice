@@ -10,6 +10,8 @@ import { Species } from "./views/species";
 import { Starships } from "./views/starships";
 import { Vehicles } from "./views/vehicles";
 import { LoginSignup } from "./views/loginSignup";
+import { Caroussel } from "./views/caroussel";
+import { Cards } from "./views/cards";
 
 
 import injectContext from "./store/appContext";
@@ -38,7 +40,9 @@ const Layout = () => {
 						<Route path="/starships" element={<Starships />} />
 						<Route path="/vehicles" element={<Vehicles />} />
 						<Route path="/loginSignup" element={<LoginSignup />} />
-						<Route path="*" element={<h1>Not found Page!</h1>} />
+						<Route path="/caroussel" element={<Caroussel />} />
+						<Route path="/cards" element={<Cards />} />
+						<Route path="*" element={<h1>Page in progress!</h1>} />
 					</Routes>
 					<Footer />
 				</ScrollToTop>

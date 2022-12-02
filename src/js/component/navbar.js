@@ -13,8 +13,8 @@ export const Navbar = () => {
 
   const [menu, setMenu] = useState([
     {menu:"/loginSignup",text:"Log in / Sign up"},
-    {menu:"*",text:"Interactive"},
-    {menu:"/databankCard",text:"Data Bank"},
+    {menu:"/caroussel",text:"Interactive"},
+    {menu:"/cards",text:"Data Bank"},
   ])
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,8 +23,8 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             {
-              links.map(link=>(
-                <li className="nav-item">
+              links.map((link, index)=>(
+                <li key={index} className="nav-item">
                   <Link className="nav-link" to={link.url}>{link.text}</Link>
                 </li>
               ))
@@ -45,8 +45,8 @@ export const Navbar = () => {
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                {menu.map(menu=>(
-                    <li>
+                {menu.map((menu,index)=>(
+                    <li key={index}>
                       <Link className="dropdown-item" to={menu.menu}>
                         {menu.text}
                       </Link>

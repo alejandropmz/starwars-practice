@@ -9,6 +9,7 @@ export const Navbar = () => {
     {url:"/planets", text:"Planets"},
     {url:"/species", text:"Species"},
     {url:"/vehicles", text:"Vehicles"},
+    {url:"/starships", text:"Starships"}
   ])
 
   const [menu, setMenu] = useState([
